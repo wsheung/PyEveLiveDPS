@@ -58,7 +58,7 @@ class SocketManager(multiprocessing.Process):
                 _sockMgr.socket.disconnect()
                 logger.info('Websocket disconnected from ' + _sockMgr.server)
 
-            def on_client_registered(self, *args):
+            def on_client_registered(self):
                 logger.info('Websocket client registered with server')
                 _sockMgr.loginNotificationQueue.put(True)
                 _sockMgr.registered = True

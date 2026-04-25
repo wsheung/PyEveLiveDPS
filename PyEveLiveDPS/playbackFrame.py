@@ -142,5 +142,5 @@ class PlaybackFrame(tk.Frame):
         #self.graphFigure.axes[0].set_xlim(0, len(yValues))
         self.subplot.margins(0.005,0.01)
         
-        self.graphCanvas.show()
+        self.graphCanvas.draw()
         self.mainWindow.makeDraggable(self.graphCanvas.get_tk_widget())
